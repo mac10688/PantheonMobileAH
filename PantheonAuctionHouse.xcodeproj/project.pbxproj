@@ -1,0 +1,548 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C4CF87121F2E89C20073EAA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */; };
+		C4CF87141F2E89C20073EAA5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87131F2E89C20073EAA5 /* FirstViewController.swift */; };
+		C4CF87161F2E89C20073EAA5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87151F2E89C20073EAA5 /* SecondViewController.swift */; };
+		C4CF87191F2E89C20073EAA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CF87171F2E89C20073EAA5 /* Main.storyboard */; };
+		C4CF871B1F2E89C20073EAA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CF871A1F2E89C20073EAA5 /* Assets.xcassets */; };
+		C4CF871E1F2E89C20073EAA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CF871C1F2E89C20073EAA5 /* LaunchScreen.storyboard */; };
+		C4CF87291F2E89C30073EAA5 /* PantheonAuctionHouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87281F2E89C30073EAA5 /* PantheonAuctionHouseTests.swift */; };
+		C4CF87341F2E89C30073EAA5 /* PantheonAuctionHouseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87331F2E89C30073EAA5 /* PantheonAuctionHouseUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C4CF87251F2E89C20073EAA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4CF87061F2E89C20073EAA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4CF870D1F2E89C20073EAA5;
+			remoteInfo = PantheonAuctionHouse;
+		};
+		C4CF87301F2E89C30073EAA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C4CF87061F2E89C20073EAA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C4CF870D1F2E89C20073EAA5;
+			remoteInfo = PantheonAuctionHouse;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C4CF870E1F2E89C20073EAA5 /* PantheonAuctionHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PantheonAuctionHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C4CF87131F2E89C20073EAA5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C4CF87151F2E89C20073EAA5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		C4CF87181F2E89C20073EAA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4CF871A1F2E89C20073EAA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C4CF871D1F2E89C20073EAA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C4CF871F1F2E89C20073EAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4CF87241F2E89C20073EAA5 /* PantheonAuctionHouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PantheonAuctionHouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4CF87281F2E89C30073EAA5 /* PantheonAuctionHouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantheonAuctionHouseTests.swift; sourceTree = "<group>"; };
+		C4CF872A1F2E89C30073EAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4CF872F1F2E89C30073EAA5 /* PantheonAuctionHouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PantheonAuctionHouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4CF87331F2E89C30073EAA5 /* PantheonAuctionHouseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PantheonAuctionHouseUITests.swift; sourceTree = "<group>"; };
+		C4CF87351F2E89C30073EAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C4CF870B1F2E89C20073EAA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4CF87211F2E89C20073EAA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4CF872C1F2E89C30073EAA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C4CF87051F2E89C20073EAA5 = {
+			isa = PBXGroup;
+			children = (
+				C4CF87101F2E89C20073EAA5 /* PantheonAuctionHouse */,
+				C4CF87271F2E89C30073EAA5 /* PantheonAuctionHouseTests */,
+				C4CF87321F2E89C30073EAA5 /* PantheonAuctionHouseUITests */,
+				C4CF870F1F2E89C20073EAA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C4CF870F1F2E89C20073EAA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C4CF870E1F2E89C20073EAA5 /* PantheonAuctionHouse.app */,
+				C4CF87241F2E89C20073EAA5 /* PantheonAuctionHouseTests.xctest */,
+				C4CF872F1F2E89C30073EAA5 /* PantheonAuctionHouseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C4CF87101F2E89C20073EAA5 /* PantheonAuctionHouse */ = {
+			isa = PBXGroup;
+			children = (
+				C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */,
+				C4CF87131F2E89C20073EAA5 /* FirstViewController.swift */,
+				C4CF87151F2E89C20073EAA5 /* SecondViewController.swift */,
+				C4CF87171F2E89C20073EAA5 /* Main.storyboard */,
+				C4CF871A1F2E89C20073EAA5 /* Assets.xcassets */,
+				C4CF871C1F2E89C20073EAA5 /* LaunchScreen.storyboard */,
+				C4CF871F1F2E89C20073EAA5 /* Info.plist */,
+			);
+			path = PantheonAuctionHouse;
+			sourceTree = "<group>";
+		};
+		C4CF87271F2E89C30073EAA5 /* PantheonAuctionHouseTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4CF87281F2E89C30073EAA5 /* PantheonAuctionHouseTests.swift */,
+				C4CF872A1F2E89C30073EAA5 /* Info.plist */,
+			);
+			path = PantheonAuctionHouseTests;
+			sourceTree = "<group>";
+		};
+		C4CF87321F2E89C30073EAA5 /* PantheonAuctionHouseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C4CF87331F2E89C30073EAA5 /* PantheonAuctionHouseUITests.swift */,
+				C4CF87351F2E89C30073EAA5 /* Info.plist */,
+			);
+			path = PantheonAuctionHouseUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C4CF870D1F2E89C20073EAA5 /* PantheonAuctionHouse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4CF87381F2E89C30073EAA5 /* Build configuration list for PBXNativeTarget "PantheonAuctionHouse" */;
+			buildPhases = (
+				C4CF870A1F2E89C20073EAA5 /* Sources */,
+				C4CF870B1F2E89C20073EAA5 /* Frameworks */,
+				C4CF870C1F2E89C20073EAA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PantheonAuctionHouse;
+			productName = PantheonAuctionHouse;
+			productReference = C4CF870E1F2E89C20073EAA5 /* PantheonAuctionHouse.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C4CF87231F2E89C20073EAA5 /* PantheonAuctionHouseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4CF873B1F2E89C30073EAA5 /* Build configuration list for PBXNativeTarget "PantheonAuctionHouseTests" */;
+			buildPhases = (
+				C4CF87201F2E89C20073EAA5 /* Sources */,
+				C4CF87211F2E89C20073EAA5 /* Frameworks */,
+				C4CF87221F2E89C20073EAA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4CF87261F2E89C20073EAA5 /* PBXTargetDependency */,
+			);
+			name = PantheonAuctionHouseTests;
+			productName = PantheonAuctionHouseTests;
+			productReference = C4CF87241F2E89C20073EAA5 /* PantheonAuctionHouseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C4CF872E1F2E89C30073EAA5 /* PantheonAuctionHouseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4CF873E1F2E89C30073EAA5 /* Build configuration list for PBXNativeTarget "PantheonAuctionHouseUITests" */;
+			buildPhases = (
+				C4CF872B1F2E89C30073EAA5 /* Sources */,
+				C4CF872C1F2E89C30073EAA5 /* Frameworks */,
+				C4CF872D1F2E89C30073EAA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4CF87311F2E89C30073EAA5 /* PBXTargetDependency */,
+			);
+			name = PantheonAuctionHouseUITests;
+			productName = PantheonAuctionHouseUITests;
+			productReference = C4CF872F1F2E89C30073EAA5 /* PantheonAuctionHouseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C4CF87061F2E89C20073EAA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Matthew Cooper";
+				TargetAttributes = {
+					C4CF870D1F2E89C20073EAA5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = U4ZF26AC74;
+						ProvisioningStyle = Automatic;
+					};
+					C4CF87231F2E89C20073EAA5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = U4ZF26AC74;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C4CF870D1F2E89C20073EAA5;
+					};
+					C4CF872E1F2E89C30073EAA5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = U4ZF26AC74;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C4CF870D1F2E89C20073EAA5;
+					};
+				};
+			};
+			buildConfigurationList = C4CF87091F2E89C20073EAA5 /* Build configuration list for PBXProject "PantheonAuctionHouse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C4CF87051F2E89C20073EAA5;
+			productRefGroup = C4CF870F1F2E89C20073EAA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C4CF870D1F2E89C20073EAA5 /* PantheonAuctionHouse */,
+				C4CF87231F2E89C20073EAA5 /* PantheonAuctionHouseTests */,
+				C4CF872E1F2E89C30073EAA5 /* PantheonAuctionHouseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C4CF870C1F2E89C20073EAA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4CF871E1F2E89C20073EAA5 /* LaunchScreen.storyboard in Resources */,
+				C4CF871B1F2E89C20073EAA5 /* Assets.xcassets in Resources */,
+				C4CF87191F2E89C20073EAA5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4CF87221F2E89C20073EAA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4CF872D1F2E89C30073EAA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C4CF870A1F2E89C20073EAA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4CF87161F2E89C20073EAA5 /* SecondViewController.swift in Sources */,
+				C4CF87121F2E89C20073EAA5 /* AppDelegate.swift in Sources */,
+				C4CF87141F2E89C20073EAA5 /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4CF87201F2E89C20073EAA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4CF87291F2E89C30073EAA5 /* PantheonAuctionHouseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4CF872B1F2E89C30073EAA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4CF87341F2E89C30073EAA5 /* PantheonAuctionHouseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C4CF87261F2E89C20073EAA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4CF870D1F2E89C20073EAA5 /* PantheonAuctionHouse */;
+			targetProxy = C4CF87251F2E89C20073EAA5 /* PBXContainerItemProxy */;
+		};
+		C4CF87311F2E89C30073EAA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C4CF870D1F2E89C20073EAA5 /* PantheonAuctionHouse */;
+			targetProxy = C4CF87301F2E89C30073EAA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C4CF87171F2E89C20073EAA5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4CF87181F2E89C20073EAA5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C4CF871C1F2E89C20073EAA5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4CF871D1F2E89C20073EAA5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C4CF87361F2E89C30073EAA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C4CF87371F2E89C30073EAA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C4CF87391F2E89C30073EAA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U4ZF26AC74;
+				INFOPLIST_FILE = PantheonAuctionHouse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PantheonAuctionHouse.PantheonAuctionHouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C4CF873A1F2E89C30073EAA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U4ZF26AC74;
+				INFOPLIST_FILE = PantheonAuctionHouse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PantheonAuctionHouse.PantheonAuctionHouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		C4CF873C1F2E89C30073EAA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = U4ZF26AC74;
+				INFOPLIST_FILE = PantheonAuctionHouseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PantheonAuctionHouse.PantheonAuctionHouseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PantheonAuctionHouse.app/PantheonAuctionHouse";
+			};
+			name = Debug;
+		};
+		C4CF873D1F2E89C30073EAA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = U4ZF26AC74;
+				INFOPLIST_FILE = PantheonAuctionHouseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PantheonAuctionHouse.PantheonAuctionHouseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PantheonAuctionHouse.app/PantheonAuctionHouse";
+			};
+			name = Release;
+		};
+		C4CF873F1F2E89C30073EAA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U4ZF26AC74;
+				INFOPLIST_FILE = PantheonAuctionHouseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PantheonAuctionHouse.PantheonAuctionHouseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PantheonAuctionHouse;
+			};
+			name = Debug;
+		};
+		C4CF87401F2E89C30073EAA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = U4ZF26AC74;
+				INFOPLIST_FILE = PantheonAuctionHouseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PantheonAuctionHouse.PantheonAuctionHouseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PantheonAuctionHouse;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C4CF87091F2E89C20073EAA5 /* Build configuration list for PBXProject "PantheonAuctionHouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4CF87361F2E89C30073EAA5 /* Debug */,
+				C4CF87371F2E89C30073EAA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4CF87381F2E89C30073EAA5 /* Build configuration list for PBXNativeTarget "PantheonAuctionHouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4CF87391F2E89C30073EAA5 /* Debug */,
+				C4CF873A1F2E89C30073EAA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4CF873B1F2E89C30073EAA5 /* Build configuration list for PBXNativeTarget "PantheonAuctionHouseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4CF873C1F2E89C30073EAA5 /* Debug */,
+				C4CF873D1F2E89C30073EAA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4CF873E1F2E89C30073EAA5 /* Build configuration list for PBXNativeTarget "PantheonAuctionHouseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4CF873F1F2E89C30073EAA5 /* Debug */,
+				C4CF87401F2E89C30073EAA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C4CF87061F2E89C20073EAA5 /* Project object */;
+}
