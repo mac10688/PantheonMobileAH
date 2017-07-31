@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C4CF87121F2E89C20073EAA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */; };
-		C4CF87141F2E89C20073EAA5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87131F2E89C20073EAA5 /* FirstViewController.swift */; };
+		C4CF87141F2E89C20073EAA5 /* CategorySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87131F2E89C20073EAA5 /* CategorySelectViewController.swift */; };
 		C4CF87161F2E89C20073EAA5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87151F2E89C20073EAA5 /* SecondViewController.swift */; };
 		C4CF87191F2E89C20073EAA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CF87171F2E89C20073EAA5 /* Main.storyboard */; };
 		C4CF871B1F2E89C20073EAA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CF871A1F2E89C20073EAA5 /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		C4CF870E1F2E89C20073EAA5 /* PantheonAuctionHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PantheonAuctionHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4CF87131F2E89C20073EAA5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		C4CF87131F2E89C20073EAA5 /* CategorySelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectViewController.swift; sourceTree = "<group>"; };
 		C4CF87151F2E89C20073EAA5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C4CF87181F2E89C20073EAA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4CF871A1F2E89C20073EAA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */,
-				C4CF87131F2E89C20073EAA5 /* FirstViewController.swift */,
+				C4CF87131F2E89C20073EAA5 /* CategorySelectViewController.swift */,
 				C4CF87151F2E89C20073EAA5 /* SecondViewController.swift */,
 				C4CF87171F2E89C20073EAA5 /* Main.storyboard */,
 				C4CF871A1F2E89C20073EAA5 /* Assets.xcassets */,
@@ -267,7 +267,7 @@
 			files = (
 				C4CF87161F2E89C20073EAA5 /* SecondViewController.swift in Sources */,
 				C4CF87121F2E89C20073EAA5 /* AppDelegate.swift in Sources */,
-				C4CF87141F2E89C20073EAA5 /* FirstViewController.swift in Sources */,
+				C4CF87141F2E89C20073EAA5 /* CategorySelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
