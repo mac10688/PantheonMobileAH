@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42DB3CC1F32B9B200A42315 /* ItemSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DB3CB1F32B9B200A42315 /* ItemSelectionTableViewController.swift */; };
+		C42DB3CE1F32D94A00A42315 /* ItemCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DB3CD1F32D94A00A42315 /* ItemCategory.swift */; };
 		C4CF87121F2E89C20073EAA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */; };
 		C4CF87141F2E89C20073EAA5 /* CategorySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87131F2E89C20073EAA5 /* CategorySelectViewController.swift */; };
 		C4CF87161F2E89C20073EAA5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87151F2E89C20073EAA5 /* SecondViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C42DB3CB1F32B9B200A42315 /* ItemSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSelectionTableViewController.swift; sourceTree = "<group>"; };
+		C42DB3CD1F32D94A00A42315 /* ItemCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCategory.swift; sourceTree = "<group>"; };
 		C4CF870E1F2E89C20073EAA5 /* PantheonAuctionHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PantheonAuctionHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4CF87131F2E89C20073EAA5 /* CategorySelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				C4CF871A1F2E89C20073EAA5 /* Assets.xcassets */,
 				C4CF871C1F2E89C20073EAA5 /* LaunchScreen.storyboard */,
 				C4CF871F1F2E89C20073EAA5 /* Info.plist */,
+				C42DB3CB1F32B9B200A42315 /* ItemSelectionTableViewController.swift */,
+				C42DB3CD1F32D94A00A42315 /* ItemCategory.swift */,
 			);
 			path = PantheonAuctionHouse;
 			sourceTree = "<group>";
@@ -266,7 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4CF87161F2E89C20073EAA5 /* SecondViewController.swift in Sources */,
+				C42DB3CC1F32B9B200A42315 /* ItemSelectionTableViewController.swift in Sources */,
 				C4CF87121F2E89C20073EAA5 /* AppDelegate.swift in Sources */,
+				C42DB3CE1F32D94A00A42315 /* ItemCategory.swift in Sources */,
 				C4CF87141F2E89C20073EAA5 /* CategorySelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

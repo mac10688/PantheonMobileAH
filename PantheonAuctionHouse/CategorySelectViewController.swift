@@ -7,17 +7,28 @@
 //
 
 import UIKit
+import os.log
 
 class CatageorySelectViewController: UITableViewController {
     
-    private var data: [String] = []
+    private var data: [ItemCategory] = []
+    private var currentCategorySelected : ItemCategory?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        for i in 0...1000 {
-            data.append("\(i)")
-        }
+        
+        let weaponCategory = ItemCategory()
+        weaponCategory.Id = 1
+        weaponCategory.Name = "Weapons"
+        
+        data.append(weaponCategory)
+        
+        let armorCategory = ItemCategory()
+        armorCategory.Id = 2
+        armorCategory.Name = "Armor"
+        
+        data.append(armorCategory)
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,11 +47,29 @@ class CatageorySelectViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")!
-        let text = data[indexPath.row]
+        let category = data[indexPath.row]
         
-        cell.textLabel?.text = text
+        cell.textLabel?.text = category.Name
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = data[indexPath.row] as ItemCategory
+        currentCategorySelected = category
+//        let myVc = storyboard?.instantiateViewController(withIdentifier: "ItemSelectionTableViewController") as! ItemSelectionTableViewController
+//        myVc.selectedCategoryId = 1
+//        navigationController?.pushViewController(myVc, animated: true)
+    }
+    
+    //MARK: Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ItemSelectionTableViewController") {
+            var viewController = segue.destination as! ItemSelectionTableViewController
+            viewController.selectedCategoryId = currentCategorySelected
+            
+        }
     }
 
 }

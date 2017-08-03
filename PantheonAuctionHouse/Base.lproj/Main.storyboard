@@ -20,8 +20,8 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="MmQ-wI-FEw" kind="relationship" relationship="viewControllers" id="hIa-Fn-GDK"/>
-                        <segue destination="VQL-bF-TxX" kind="relationship" relationship="viewControllers" id="U6W-Y7-r4S"/>
+                        <segue destination="dkC-cS-bCh" kind="relationship" relationship="viewControllers" id="hIa-Fn-GDK"/>
+                        <segue destination="Udl-gf-x3F" kind="relationship" relationship="viewControllers" id="U6W-Y7-r4S"/>
                         <segue destination="Djl-gh-aww" kind="relationship" relationship="viewControllers" id="ZSf-wf-oLU"/>
                     </connections>
                 </tabBarController>
@@ -54,6 +54,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="42r-Wb-nww" kind="show" id="Y5J-1S-qTS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -61,11 +64,39 @@
                             <outlet property="delegate" destination="MmQ-wI-FEw" id="7Lq-BI-Z2q"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Auction House" image="Auction" id="pSr-2f-pVU"/>
+                    <navigationItem key="navigationItem" id="XL5-ZZ-DvW"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfW-BV-UCg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="-383"/>
+            <point key="canvasLocation" x="1780" y="-383.65817091454278"/>
+        </scene>
+        <!--Item Selection Table View Controller-->
+        <scene sceneID="HV3-f4-ULI">
+            <objects>
+                <tableViewController storyboardIdentifier="ItemSelectionTableViewController" id="42r-Wb-nww" customClass="ItemSelectionTableViewController" customModule="PantheonAuctionHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="82L-tF-ITz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Qw2-AH-13p">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qw2-AH-13p" id="EyK-6V-cCX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="42r-Wb-nww" id="Z6m-4Q-j34"/>
+                            <outlet property="delegate" destination="42r-Wb-nww" id="KEJ-zA-N7M"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wcb-Ab-CCK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2495" y="-384"/>
         </scene>
         <!--About-->
         <scene sceneID="5BM-0G-nS7">
@@ -109,7 +140,7 @@
             </objects>
             <point key="canvasLocation" x="-2.3999999999999999" y="737.18140929535241"/>
         </scene>
-        <!--My Sells-->
+        <!--Table View Controller-->
         <scene sceneID="em8-aS-2mH">
             <objects>
                 <tableViewController id="VQL-bF-TxX" sceneMemberID="viewController">
@@ -132,11 +163,49 @@
                             <outlet property="delegate" destination="VQL-bF-TxX" id="CG0-Ew-Qg3"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="My Sells" image="Sell" id="rlT-kD-szt"/>
+                    <navigationItem key="navigationItem" id="rpq-up-pgx"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l73-jh-rOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="289"/>
+            <point key="canvasLocation" x="1780" y="288.30584707646182"/>
+        </scene>
+        <!--Auction House-->
+        <scene sceneID="V3a-0F-ZdW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dkC-cS-bCh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Auction House" image="Auction" id="pSr-2f-pVU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="adf-uj-EeW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MmQ-wI-FEw" kind="relationship" relationship="rootViewController" id="K0b-jM-lbc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRK-Dy-aJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="-383.65817091454278"/>
+        </scene>
+        <!--My Sells-->
+        <scene sceneID="SOk-tj-Qmo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Udl-gf-x3F" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="My Sells" image="Sell" id="rlT-kD-szt"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="vfd-i2-Vsi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VQL-bF-TxX" kind="relationship" relationship="rootViewController" id="n3E-M4-MTR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tll-U4-L0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="288.30584707646182"/>
         </scene>
     </scenes>
     <resources>
