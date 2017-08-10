@@ -10,7 +10,7 @@ import UIKit
 
 class ItemSelectionTableViewController: UITableViewController {
 
-    var selectedCategoryId : ItemCategory?
+    var selectedCategoryId : CategoryType?
     
     
     override func viewDidLoad() {

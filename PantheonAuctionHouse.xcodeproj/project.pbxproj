@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56CA4D9471D91E83DFE77841 /* Pods_PantheonAuctionHouseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6473F4DB9BE7885647717E /* Pods_PantheonAuctionHouseTests.framework */; };
+		759ECA52802155E93153AE6B /* Pods_PantheonAuctionHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A833BB44D2B6B432C502D1 /* Pods_PantheonAuctionHouse.framework */; };
+		B73812A6A3226E8EA8051571 /* Pods_PantheonAuctionHouseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B6B69202471781AAAAB0BAD /* Pods_PantheonAuctionHouseUITests.framework */; };
 		C42DB3CC1F32B9B200A42315 /* ItemSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DB3CB1F32B9B200A42315 /* ItemSelectionTableViewController.swift */; };
-		C42DB3CE1F32D94A00A42315 /* ItemCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DB3CD1F32D94A00A42315 /* ItemCategory.swift */; };
+		C42DB3CE1F32D94A00A42315 /* AuctionHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DB3CD1F32D94A00A42315 /* AuctionHouse.swift */; };
 		C4CF87121F2E89C20073EAA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */; };
 		C4CF87141F2E89C20073EAA5 /* CategorySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87131F2E89C20073EAA5 /* CategorySelectViewController.swift */; };
 		C4CF87161F2E89C20073EAA5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87151F2E89C20073EAA5 /* SecondViewController.swift */; };
@@ -37,8 +40,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		048D7E82FECDD2DD7A5B31C1 /* Pods-PantheonAuctionHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantheonAuctionHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PantheonAuctionHouse/Pods-PantheonAuctionHouse.debug.xcconfig"; sourceTree = "<group>"; };
+		1A91DB4E9C6A2C02CEC86546 /* Pods-PantheonAuctionHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantheonAuctionHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantheonAuctionHouse/Pods-PantheonAuctionHouse.release.xcconfig"; sourceTree = "<group>"; };
+		46A833BB44D2B6B432C502D1 /* Pods_PantheonAuctionHouse.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantheonAuctionHouse.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BE0B758DDBA8E17A209FFB3 /* Pods-PantheonAuctionHouseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantheonAuctionHouseUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PantheonAuctionHouseUITests/Pods-PantheonAuctionHouseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B6B69202471781AAAAB0BAD /* Pods_PantheonAuctionHouseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantheonAuctionHouseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E6473F4DB9BE7885647717E /* Pods_PantheonAuctionHouseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PantheonAuctionHouseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3C6BBE2F213264EA2AF3EDC /* Pods-PantheonAuctionHouseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantheonAuctionHouseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PantheonAuctionHouseTests/Pods-PantheonAuctionHouseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B40F9793FB894C8C36826AEB /* Pods-PantheonAuctionHouseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantheonAuctionHouseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantheonAuctionHouseUITests/Pods-PantheonAuctionHouseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BF018F265ACEB8E4EB5BAC25 /* Pods-PantheonAuctionHouseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantheonAuctionHouseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantheonAuctionHouseTests/Pods-PantheonAuctionHouseTests.release.xcconfig"; sourceTree = "<group>"; };
 		C42DB3CB1F32B9B200A42315 /* ItemSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSelectionTableViewController.swift; sourceTree = "<group>"; };
-		C42DB3CD1F32D94A00A42315 /* ItemCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCategory.swift; sourceTree = "<group>"; };
+		C42DB3CD1F32D94A00A42315 /* AuctionHouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionHouse.swift; sourceTree = "<group>"; };
 		C4CF870E1F2E89C20073EAA5 /* PantheonAuctionHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PantheonAuctionHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4CF87131F2E89C20073EAA5 /* CategorySelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759ECA52802155E93153AE6B /* Pods_PantheonAuctionHouse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56CA4D9471D91E83DFE77841 /* Pods_PantheonAuctionHouseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B73812A6A3226E8EA8051571 /* Pods_PantheonAuctionHouseUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D744D822753E45B01356E0C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				048D7E82FECDD2DD7A5B31C1 /* Pods-PantheonAuctionHouse.debug.xcconfig */,
+				1A91DB4E9C6A2C02CEC86546 /* Pods-PantheonAuctionHouse.release.xcconfig */,
+				A3C6BBE2F213264EA2AF3EDC /* Pods-PantheonAuctionHouseTests.debug.xcconfig */,
+				BF018F265ACEB8E4EB5BAC25 /* Pods-PantheonAuctionHouseTests.release.xcconfig */,
+				8BE0B758DDBA8E17A209FFB3 /* Pods-PantheonAuctionHouseUITests.debug.xcconfig */,
+				B40F9793FB894C8C36826AEB /* Pods-PantheonAuctionHouseUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9DF4BEE7D0A1F404F59075DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46A833BB44D2B6B432C502D1 /* Pods_PantheonAuctionHouse.framework */,
+				9E6473F4DB9BE7885647717E /* Pods_PantheonAuctionHouseTests.framework */,
+				9B6B69202471781AAAAB0BAD /* Pods_PantheonAuctionHouseUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C4CF87051F2E89C20073EAA5 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +125,8 @@
 				C4CF87271F2E89C30073EAA5 /* PantheonAuctionHouseTests */,
 				C4CF87321F2E89C30073EAA5 /* PantheonAuctionHouseUITests */,
 				C4CF870F1F2E89C20073EAA5 /* Products */,
+				8D744D822753E45B01356E0C /* Pods */,
+				9DF4BEE7D0A1F404F59075DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,7 +151,7 @@
 				C4CF871C1F2E89C20073EAA5 /* LaunchScreen.storyboard */,
 				C4CF871F1F2E89C20073EAA5 /* Info.plist */,
 				C42DB3CB1F32B9B200A42315 /* ItemSelectionTableViewController.swift */,
-				C42DB3CD1F32D94A00A42315 /* ItemCategory.swift */,
+				C42DB3CD1F32D94A00A42315 /* AuctionHouse.swift */,
 			);
 			path = PantheonAuctionHouse;
 			sourceTree = "<group>";
@@ -141,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4CF87381F2E89C30073EAA5 /* Build configuration list for PBXNativeTarget "PantheonAuctionHouse" */;
 			buildPhases = (
+				440C2F8A8B84294505D754AF /* [CP] Check Pods Manifest.lock */,
 				C4CF870A1F2E89C20073EAA5 /* Sources */,
 				C4CF870B1F2E89C20073EAA5 /* Frameworks */,
 				C4CF870C1F2E89C20073EAA5 /* Resources */,
+				98890B7618DCA5FF72B4A2A0 /* [CP] Embed Pods Frameworks */,
+				3148B6E447F739EDF1394DED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4CF873B1F2E89C30073EAA5 /* Build configuration list for PBXNativeTarget "PantheonAuctionHouseTests" */;
 			buildPhases = (
+				265A637A0DFCCCDF0A5E2963 /* [CP] Check Pods Manifest.lock */,
 				C4CF87201F2E89C20073EAA5 /* Sources */,
 				C4CF87211F2E89C20073EAA5 /* Frameworks */,
 				C4CF87221F2E89C20073EAA5 /* Resources */,
+				3C45EC61F101596F497414B2 /* [CP] Embed Pods Frameworks */,
+				9C028739351BE4398AD1012D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4CF873E1F2E89C30073EAA5 /* Build configuration list for PBXNativeTarget "PantheonAuctionHouseUITests" */;
 			buildPhases = (
+				C84453A7F71D9179852A36E0 /* [CP] Check Pods Manifest.lock */,
 				C4CF872B1F2E89C30073EAA5 /* Sources */,
 				C4CF872C1F2E89C30073EAA5 /* Frameworks */,
 				C4CF872D1F2E89C30073EAA5 /* Resources */,
+				FC079EB8181185459EAA2725 /* [CP] Embed Pods Frameworks */,
+				8063F52C59C32BD2CB365402 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,6 +315,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		265A637A0DFCCCDF0A5E2963 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PantheonAuctionHouseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3148B6E447F739EDF1394DED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PantheonAuctionHouse/Pods-PantheonAuctionHouse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C45EC61F101596F497414B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PantheonAuctionHouseTests/Pods-PantheonAuctionHouseTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		440C2F8A8B84294505D754AF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PantheonAuctionHouse-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8063F52C59C32BD2CB365402 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PantheonAuctionHouseUITests/Pods-PantheonAuctionHouseUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98890B7618DCA5FF72B4A2A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PantheonAuctionHouse/Pods-PantheonAuctionHouse-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PantheonAuctionHouse/Pods-PantheonAuctionHouse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C028739351BE4398AD1012D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PantheonAuctionHouseTests/Pods-PantheonAuctionHouseTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C84453A7F71D9179852A36E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PantheonAuctionHouseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC079EB8181185459EAA2725 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PantheonAuctionHouseUITests/Pods-PantheonAuctionHouseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C4CF870A1F2E89C20073EAA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -274,7 +473,7 @@
 				C4CF87161F2E89C20073EAA5 /* SecondViewController.swift in Sources */,
 				C42DB3CC1F32B9B200A42315 /* ItemSelectionTableViewController.swift in Sources */,
 				C4CF87121F2E89C20073EAA5 /* AppDelegate.swift in Sources */,
-				C42DB3CE1F32D94A00A42315 /* ItemCategory.swift in Sources */,
+				C42DB3CE1F32D94A00A42315 /* AuctionHouse.swift in Sources */,
 				C4CF87141F2E89C20073EAA5 /* CategorySelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +626,7 @@
 		};
 		C4CF87391F2E89C30073EAA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 048D7E82FECDD2DD7A5B31C1 /* Pods-PantheonAuctionHouse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U4ZF26AC74;
@@ -441,6 +641,7 @@
 		};
 		C4CF873A1F2E89C30073EAA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A91DB4E9C6A2C02CEC86546 /* Pods-PantheonAuctionHouse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = U4ZF26AC74;
@@ -455,6 +656,7 @@
 		};
 		C4CF873C1F2E89C30073EAA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3C6BBE2F213264EA2AF3EDC /* Pods-PantheonAuctionHouseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -470,6 +672,7 @@
 		};
 		C4CF873D1F2E89C30073EAA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF018F265ACEB8E4EB5BAC25 /* Pods-PantheonAuctionHouseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -485,6 +688,7 @@
 		};
 		C4CF873F1F2E89C30073EAA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BE0B758DDBA8E17A209FFB3 /* Pods-PantheonAuctionHouseUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = U4ZF26AC74;
@@ -499,6 +703,7 @@
 		};
 		C4CF87401F2E89C30073EAA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B40F9793FB894C8C36826AEB /* Pods-PantheonAuctionHouseUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = U4ZF26AC74;

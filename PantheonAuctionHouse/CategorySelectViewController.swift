@@ -7,28 +7,30 @@
 //
 
 import UIKit
-import os.log
+import Alamofire
 
 class CatageorySelectViewController: UITableViewController {
     
-    private var data: [ItemCategory] = []
-    private var currentCategorySelected : ItemCategory?
+    var selectedCategory : CategoryType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let weaponCategory = ItemCategory()
-        weaponCategory.Id = 1
-        weaponCategory.Name = "Weapons"
-        
-        data.append(weaponCategory)
-        
-        let armorCategory = ItemCategory()
-        armorCategory.Id = 2
-        armorCategory.Name = "Armor"
-        
-        data.append(armorCategory)
+//        let weaponCategory = ItemCategory()
+//        weaponCategory.Id = 1
+//        weaponCategory.Name = "Weapons"
+//        
+//        data.append(weaponCategory)
+//        
+//        let armorCategory = ItemCategory()
+//        armorCategory.Id = 2
+//        armorCategory.Name = "Armor"
+//        
+//        data.append(armorCategory)
+        Alamofire.request("https://www.dev.pantheonah.com/categories/").responseJSON { response in
+            print(response)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,34 +43,36 @@ class CatageorySelectViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")!
-        let category = data[indexPath.row]
         
-        cell.textLabel?.text = category.Name
+        if(indexPath.row == 0)
+        {
+            cell.textLabel?.text = "Armors"
+        } else
+        {
+            cell.textLabel?.text = "Weapons"
+        }
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let category = data[indexPath.row] as ItemCategory
-        currentCategorySelected = category
-//        let myVc = storyboard?.instantiateViewController(withIdentifier: "ItemSelectionTableViewController") as! ItemSelectionTableViewController
-//        myVc.selectedCategoryId = 1
-//        navigationController?.pushViewController(myVc, animated: true)
+        selectedCategory = indexPath.row == 0 ? .Armor : .Weapon
+        
     }
     
     //MARK: Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "ItemSelectionTableViewController") {
-            var viewController = segue.destination as! ItemSelectionTableViewController
-            viewController.selectedCategoryId = currentCategorySelected
-            
+            let viewController = segue.destination as! ItemSelectionTableViewController
+            viewController.selectedCategoryId = selectedCategory
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 
