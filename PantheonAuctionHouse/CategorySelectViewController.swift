@@ -10,8 +10,7 @@ import UIKit
 import Alamofire
 
 class CatageorySelectViewController: UITableViewController {
-    
-    var selectedCategory : CategoryType?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +27,7 @@ class CatageorySelectViewController: UITableViewController {
 //        armorCategory.Name = "Armor"
 //        
 //        data.append(armorCategory)
-        Alamofire.request("https://www.dev.pantheonah.com/categories/").responseJSON { response in
-            print(response)
-        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,42 +35,16 @@ class CatageorySelectViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")!
-        
-        if(indexPath.row == 0)
-        {
-            cell.textLabel?.text = "Armors"
-        } else
-        {
-            cell.textLabel?.text = "Weapons"
-        }
-        
-        return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedCategory = indexPath.row == 0 ? .Armor : .Weapon
-        
-    }
     
     //MARK: Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "ItemSelectionTableViewController") {
-            let viewController = segue.destination as! ItemSelectionTableViewController
-            viewController.selectedCategoryId = selectedCategory
-            navigationController?.pushViewController(viewController, animated: true)
-        }
+//        if(segue.identifier == "ItemSelectionTableViewController") {
+//            let viewController = segue.destination as! ItemSelectionTableViewController
+//            viewController.selectedCategoryId = selectedAuctionHouseItem
+//            navigationController?.pushViewController(viewController, animated: true)
+//        }
     }
 
 }
