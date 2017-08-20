@@ -10,14 +10,16 @@ import UIKit
 import Alamofire
 import DropDown
 
-class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var auctionHouse : AuctionHouse?
     var selectedAuctionHouseItem : AuctionHouseItem?
     var filterSelection = Filter.None
     var sortBySelection = SortBy.Alphabet
+    var textSearch = ""
     
     @IBOutlet weak var auctionHouseTable: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    
+    let searchController = UISearchController(searchResultsController: nil)
     
     var filterDropDown: DropDown?
     var sortDropDown: DropDown?
@@ -35,16 +37,24 @@ class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITable
                     }
                 }
                 
+                let filterByName: (AuctionHouseItem) -> Bool = { item in
+                    switch(item.item) {
+                    case .ArmorEnum(let armor): return self.textSearch != "" ? armor.name.contains(self.textSearch) : true
+                    case .WeaponEnum(let weapon): return self.textSearch != "" ? weapon.name.contains(self.textSearch) : true
+                    }
+                }
+                
+                
                 let sortBy: (AuctionHouseItem, AuctionHouseItem) -> Bool = { item1, item2 in
                     switch(self.sortBySelection) {
                     case .Alphabet: return self.getAuctionHouseItemName(item: item1) < self.getAuctionHouseItemName(item: item2)
                     case .Price: return item1.price < item2.price
-                    case .TimeLeft: return item1.timeLeft < item2.timeLeft
+                    case .TimeLeft: return item1.expirationDate < item2.expirationDate
                     }
                 }
                 
                 let ahItems = ah.auctionHouseItems
-                return ahItems.filter(filterBy).sorted(by: sortBy)
+                return ahItems.filter(filterBy).filter(filterByName).sorted(by: sortBy)
             } else {
                 return []
             }
@@ -111,6 +121,11 @@ class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITable
             }
             self.auctionHouseTable.reloadData()
         }
+        
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        auctionHouseTable.tableHeaderView = searchController.searchBar
 
         // Do any additional setup after loading the view.
     }
@@ -121,11 +136,6 @@ class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBAction func sortButtonPressed(_ sender: UIButton) {
         sortDropDown?.show()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        filterDropDown?.show()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -140,20 +150,25 @@ class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITable
         
         let auctionHouseItem = tableData[indexPath.row]
         
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .none
+        
+        
         switch(auctionHouseItem.item) {
         case .ArmorEnum(let armor):
             let armorCell = tableView.dequeueReusableCell(withIdentifier: "armorCell") as! ArmorTableViewCell
             armorCell.name.text = armor.name
             armorCell.price.text = String(auctionHouseItem.price)
+            armorCell.expiration.text = formatter.string(from: auctionHouseItem.expirationDate)
             armorCell.defense.text = String(armor.defense)
             armorCell.resistance.text = String(armor.elementalResistance)
-            armorCell.expiration.text = String(describing: auctionHouseItem.timeLeft)
             return armorCell
         case .WeaponEnum(let weapon):
             let weaponCell = tableView.dequeueReusableCell(withIdentifier: "weaponCell") as! WeaponTableViewCell
             weaponCell.name.text = weapon.name
             weaponCell.price.text = String(auctionHouseItem.price)
-            weaponCell.expiration.text = String(describing: auctionHouseItem.timeLeft)
+            weaponCell.expiration.text = formatter.string(from: auctionHouseItem.expirationDate)
             weaponCell.damage.text = String(weapon.damage)
             weaponCell.delay.text = String(weapon.delay)
             return weaponCell
@@ -184,4 +199,11 @@ class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITable
     }
     */
 
+}
+
+extension AuctionHouseViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        textSearch = searchController.searchBar.text!
+        auctionHouseTable.reloadData()
+    }
 }

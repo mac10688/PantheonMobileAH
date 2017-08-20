@@ -201,12 +201,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="eAB-U1-FeD">
-                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <view contentMode="scaleToFill" restorationIdentifier="Button Container" translatesAutoresizingMaskIntoConstraints="NO" id="0Zd-hL-7N5" userLabel="Button Container">
-                                <rect key="frame" x="0.0" y="108" width="375" height="30"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cjz-XW-BAo">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
@@ -237,7 +233,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cNe-FE-nPb">
-                                <rect key="frame" x="0.0" y="138" width="375" height="480"/>
+                                <rect key="frame" x="0.0" y="94" width="375" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="armorCell" rowHeight="150" id="LHG-eX-rjA" customClass="ArmorTableViewCell" customModule="PantheonAuctionHouse" customModuleProvider="target">
@@ -455,22 +451,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eAB-U1-FeD" firstAttribute="leading" secondItem="ZcI-VD-Y2V" secondAttribute="leadingMargin" constant="-16" id="8tn-GU-vHG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0Zd-hL-7N5" secondAttribute="trailing" constant="-16" id="99M-8Q-JRH"/>
                             <constraint firstItem="0Zd-hL-7N5" firstAttribute="leading" secondItem="ZcI-VD-Y2V" secondAttribute="leadingMargin" constant="-16" id="Be2-FW-Fqm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cNe-FE-nPb" secondAttribute="trailing" constant="-16" id="HaC-Hc-58Q"/>
-                            <constraint firstItem="0Zd-hL-7N5" firstAttribute="top" secondItem="eAB-U1-FeD" secondAttribute="bottom" id="QDn-7p-8XT"/>
-                            <constraint firstItem="eAB-U1-FeD" firstAttribute="top" secondItem="I5F-Fn-qGf" secondAttribute="bottom" id="d1R-9W-Hrl"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eAB-U1-FeD" secondAttribute="trailing" constant="-16" id="ir0-nK-lHv"/>
                             <constraint firstItem="E2S-Qf-F07" firstAttribute="top" secondItem="cNe-FE-nPb" secondAttribute="bottom" id="nmS-rt-RHi"/>
                             <constraint firstItem="cNe-FE-nPb" firstAttribute="leading" secondItem="ZcI-VD-Y2V" secondAttribute="leadingMargin" constant="-16" id="o3X-z0-wtG"/>
                             <constraint firstItem="cNe-FE-nPb" firstAttribute="top" secondItem="0Zd-hL-7N5" secondAttribute="bottom" id="qkG-9i-VjP"/>
+                            <constraint firstItem="0Zd-hL-7N5" firstAttribute="top" secondItem="I5F-Fn-qGf" secondAttribute="bottom" id="w0J-lU-cjJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bpU-N9-hHb"/>
                     <connections>
                         <outlet property="auctionHouseTable" destination="cNe-FE-nPb" id="WCn-Mi-KYz"/>
-                        <outlet property="searchBar" destination="eAB-U1-FeD" id="xoo-L5-Y7t"/>
                         <outlet property="searchDisplayController" destination="Too-RH-NKV" id="wCU-BW-8ZF"/>
                     </connections>
                 </viewController>

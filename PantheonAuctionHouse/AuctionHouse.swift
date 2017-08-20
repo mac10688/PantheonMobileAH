@@ -24,12 +24,12 @@ class AuctionHouse {
 
 class AuctionHouseItem {
     let price : Int
-    let timeLeft : Date
+    let expirationDate : Date
     let item : Item
     
-    init(price: Int, timeLeft: Date, item: Item) {
+    init(price: Int, expirationDate: Date, item: Item) {
         self.price = price
-        self.timeLeft = timeLeft
+        self.expirationDate = expirationDate
         self.item = item
     }
     
@@ -38,7 +38,7 @@ class AuctionHouseItem {
             return nil
         }
         
-        guard let timeLeft = json["timeLeft"] as? Int else {
+        guard let timeLeft = json["expirationDate"] as? Int else {
             return nil
         }
         
@@ -52,7 +52,7 @@ class AuctionHouseItem {
         
         let t = Date(timeIntervalSince1970: TimeInterval(timeLeft))
         
-        self.init(price: price, timeLeft: t, item: item)
+        self.init(price: price, expirationDate: t, item: item)
         
     }
     
