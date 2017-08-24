@@ -9,6 +9,7 @@ target 'PantheonAuctionHouse' do
   # Pods for PantheonAuctionHouse
   pod 'Alamofire', '~> 4.4'
   pod 'DropDown'
+  pod 'AlamofireImage', '~> 3.1'
 
   target 'PantheonAuctionHouseTests' do
     inherit! :search_paths

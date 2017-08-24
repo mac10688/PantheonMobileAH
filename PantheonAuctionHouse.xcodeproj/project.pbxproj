@@ -10,14 +10,13 @@
 		56CA4D9471D91E83DFE77841 /* Pods_PantheonAuctionHouseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6473F4DB9BE7885647717E /* Pods_PantheonAuctionHouseTests.framework */; };
 		759ECA52802155E93153AE6B /* Pods_PantheonAuctionHouse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A833BB44D2B6B432C502D1 /* Pods_PantheonAuctionHouse.framework */; };
 		B73812A6A3226E8EA8051571 /* Pods_PantheonAuctionHouseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B6B69202471781AAAAB0BAD /* Pods_PantheonAuctionHouseUITests.framework */; };
-		C42DB3CC1F32B9B200A42315 /* ItemSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DB3CB1F32B9B200A42315 /* ItemSelectionTableViewController.swift */; };
 		C42DB3CE1F32D94A00A42315 /* AuctionHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DB3CD1F32D94A00A42315 /* AuctionHouse.swift */; };
 		C42FE8851F4023F300A663A9 /* AuctionHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FE8841F4023F300A663A9 /* AuctionHouseViewController.swift */; };
 		C42FE8891F41006800A663A9 /* ArmorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FE8881F41006800A663A9 /* ArmorTableViewCell.swift */; };
 		C42FE88B1F41082F00A663A9 /* WeaponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42FE88A1F41082F00A663A9 /* WeaponTableViewCell.swift */; };
+		C432DA881F4E85D90015EFE7 /* WeaponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C432DA871F4E85D90015EFE7 /* WeaponViewController.swift */; };
+		C432DA8A1F4E85FC0015EFE7 /* ArmorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C432DA891F4E85FC0015EFE7 /* ArmorViewController.swift */; };
 		C4CF87121F2E89C20073EAA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */; };
-		C4CF87141F2E89C20073EAA5 /* CategorySelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87131F2E89C20073EAA5 /* CategorySelectViewController.swift */; };
-		C4CF87161F2E89C20073EAA5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CF87151F2E89C20073EAA5 /* SecondViewController.swift */; };
 		C4CF87191F2E89C20073EAA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CF87171F2E89C20073EAA5 /* Main.storyboard */; };
 		C4CF871B1F2E89C20073EAA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4CF871A1F2E89C20073EAA5 /* Assets.xcassets */; };
 		C4CF871E1F2E89C20073EAA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4CF871C1F2E89C20073EAA5 /* LaunchScreen.storyboard */; };
@@ -52,15 +51,14 @@
 		A3C6BBE2F213264EA2AF3EDC /* Pods-PantheonAuctionHouseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantheonAuctionHouseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PantheonAuctionHouseTests/Pods-PantheonAuctionHouseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B40F9793FB894C8C36826AEB /* Pods-PantheonAuctionHouseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantheonAuctionHouseUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantheonAuctionHouseUITests/Pods-PantheonAuctionHouseUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF018F265ACEB8E4EB5BAC25 /* Pods-PantheonAuctionHouseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PantheonAuctionHouseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PantheonAuctionHouseTests/Pods-PantheonAuctionHouseTests.release.xcconfig"; sourceTree = "<group>"; };
-		C42DB3CB1F32B9B200A42315 /* ItemSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemSelectionTableViewController.swift; sourceTree = "<group>"; };
 		C42DB3CD1F32D94A00A42315 /* AuctionHouse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionHouse.swift; sourceTree = "<group>"; };
 		C42FE8841F4023F300A663A9 /* AuctionHouseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionHouseViewController.swift; sourceTree = "<group>"; };
 		C42FE8881F41006800A663A9 /* ArmorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArmorTableViewCell.swift; sourceTree = "<group>"; };
 		C42FE88A1F41082F00A663A9 /* WeaponTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponTableViewCell.swift; sourceTree = "<group>"; };
+		C432DA871F4E85D90015EFE7 /* WeaponViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeaponViewController.swift; sourceTree = "<group>"; };
+		C432DA891F4E85FC0015EFE7 /* ArmorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArmorViewController.swift; sourceTree = "<group>"; };
 		C4CF870E1F2E89C20073EAA5 /* PantheonAuctionHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PantheonAuctionHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4CF87131F2E89C20073EAA5 /* CategorySelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySelectViewController.swift; sourceTree = "<group>"; };
-		C4CF87151F2E89C20073EAA5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		C4CF87181F2E89C20073EAA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4CF871A1F2E89C20073EAA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4CF871D1F2E89C20073EAA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -150,17 +148,16 @@
 			isa = PBXGroup;
 			children = (
 				C4CF87111F2E89C20073EAA5 /* AppDelegate.swift */,
-				C4CF87131F2E89C20073EAA5 /* CategorySelectViewController.swift */,
-				C4CF87151F2E89C20073EAA5 /* SecondViewController.swift */,
 				C4CF87171F2E89C20073EAA5 /* Main.storyboard */,
 				C4CF871A1F2E89C20073EAA5 /* Assets.xcassets */,
 				C4CF871C1F2E89C20073EAA5 /* LaunchScreen.storyboard */,
 				C4CF871F1F2E89C20073EAA5 /* Info.plist */,
-				C42DB3CB1F32B9B200A42315 /* ItemSelectionTableViewController.swift */,
 				C42DB3CD1F32D94A00A42315 /* AuctionHouse.swift */,
 				C42FE8841F4023F300A663A9 /* AuctionHouseViewController.swift */,
 				C42FE8881F41006800A663A9 /* ArmorTableViewCell.swift */,
 				C42FE88A1F41082F00A663A9 /* WeaponTableViewCell.swift */,
+				C432DA871F4E85D90015EFE7 /* WeaponViewController.swift */,
+				C432DA891F4E85FC0015EFE7 /* ArmorViewController.swift */,
 			);
 			path = PantheonAuctionHouse;
 			sourceTree = "<group>";
@@ -414,11 +411,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PantheonAuctionHouse/Pods-PantheonAuctionHouse-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,12 +482,11 @@
 			files = (
 				C42FE8891F41006800A663A9 /* ArmorTableViewCell.swift in Sources */,
 				C42FE88B1F41082F00A663A9 /* WeaponTableViewCell.swift in Sources */,
+				C432DA881F4E85D90015EFE7 /* WeaponViewController.swift in Sources */,
+				C432DA8A1F4E85FC0015EFE7 /* ArmorViewController.swift in Sources */,
 				C42FE8851F4023F300A663A9 /* AuctionHouseViewController.swift in Sources */,
-				C4CF87161F2E89C20073EAA5 /* SecondViewController.swift in Sources */,
-				C42DB3CC1F32B9B200A42315 /* ItemSelectionTableViewController.swift in Sources */,
 				C4CF87121F2E89C20073EAA5 /* AppDelegate.swift in Sources */,
 				C42DB3CE1F32D94A00A42315 /* AuctionHouse.swift in Sources */,
-				C4CF87141F2E89C20073EAA5 /* CategorySelectViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

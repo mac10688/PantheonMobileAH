@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 import DropDown
 
 class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -155,6 +156,15 @@ class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITable
         formatter.timeStyle = .none
         
         
+        let placeholderImage = UIImage(named: "Armor")!
+        
+        let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
+            size: CGSize(width: 100, height: 100),
+            radius: 20.0
+        )
+        
+        let newPlaceHolder = filter.filter(placeholderImage)
+        
         switch(auctionHouseItem.item) {
         case .ArmorEnum(let armor):
             let armorCell = tableView.dequeueReusableCell(withIdentifier: "armorCell") as! ArmorTableViewCell
@@ -163,6 +173,9 @@ class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITable
             armorCell.expiration.text = formatter.string(from: auctionHouseItem.expirationDate)
             armorCell.defense.text = String(armor.defense)
             armorCell.resistance.text = String(armor.elementalResistance)
+            
+            let url = URL(string: "https://cdn4.iconfinder.com/data/icons/video-game-items-concepts/128/sword-shield-512.png")!
+            armorCell.imageView!.af_setImage(withURL: url, placeholderImage: newPlaceHolder, filter: filter)
             return armorCell
         case .WeaponEnum(let weapon):
             let weaponCell = tableView.dequeueReusableCell(withIdentifier: "weaponCell") as! WeaponTableViewCell
@@ -171,16 +184,32 @@ class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITable
             weaponCell.expiration.text = formatter.string(from: auctionHouseItem.expirationDate)
             weaponCell.damage.text = String(weapon.damage)
             weaponCell.delay.text = String(weapon.delay)
+
+            let url = URL(string: "https://cdn1.iconfinder.com/data/icons/outlined-medieval-icons-pack/200/misc_game_coop-512.png")!
+            
+            weaponCell.imageView!.af_setImage(withURL: url, placeholderImage: newPlaceHolder, filter: filter)
             return weaponCell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-//        if let ah = auctionHouse {
-//            selectedAuctionHouseItem = ah.auctionHouseItems[indexPath.row]
-//        }
+        var segueIdentifier: String
         
+        let ahItem = self.tableData[indexPath.row]
+        
+        selectedAuctionHouseItem = ahItem
+        
+        switch ahItem.item {
+        case .ArmorEnum(_):
+            segueIdentifier = "armorIdentifier"
+            break
+        
+        case .WeaponEnum(_):
+            segueIdentifier = "weaponIdentifier"
+            break
+        }
+        self.performSegue(withIdentifier: segueIdentifier, sender: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -189,15 +218,21 @@ class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITable
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        
+        if let weaponController = segue.destination as? WeaponViewController {
+            weaponController.auctionHouseItem = selectedAuctionHouseItem
+        } else if let armorController = segue.destination as? ArmorViewController {
+            armorController.auctionHouseItem = selectedAuctionHouseItem
+        }
     }
-    */
+ 
 
 }
 
@@ -207,3 +242,46 @@ extension AuctionHouseViewController: UISearchResultsUpdating {
         auctionHouseTable.reloadData()
     }
 }
+
+extension UIImageView {
+    public func imageFromServerURL(urlString: String) {
+        
+        URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
+            
+            if error != nil {
+                print(error ?? "error")
+                return
+            }
+            DispatchQueue.main.async(execute: { () -> Void in
+                let image = UIImage(data: data!)
+                let resized = self.resizeImage(image: image!, newSize: CGSize(width:100, height: 100))
+                self.image = resized
+            })
+            
+        }).resume()
+    }
+    
+    func resizeImage(image: UIImage, newSize: CGSize) -> (UIImage) {
+        
+        let newRect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height).integral
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
+        let context = UIGraphicsGetCurrentContext()
+        
+        // Set the quality level to use when rescaling
+        context!.interpolationQuality = CGInterpolationQuality.default
+        let flipVertical = CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: newSize.height)
+        
+        context!.concatenate(flipVertical)
+        // Draw into the context; this scales the image
+        context?.draw(image.cgImage!, in: CGRect(x: 0.0,y: 0.0, width: newRect.width, height: newRect.height))
+        
+        let newImageRef = context!.makeImage()! as CGImage
+        let newImage = UIImage(cgImage: newImageRef)
+        
+        // Get the resized image from the context and a UIImage
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
+}
+
