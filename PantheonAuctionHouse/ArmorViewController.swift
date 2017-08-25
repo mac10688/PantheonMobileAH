@@ -7,22 +7,49 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class ArmorViewController: UIViewController {
 
-    var auctionHouseItem : AuctionHouseItem?
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var defLabel: UILabel!
+    @IBOutlet weak var resLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var expirationLabel: UILabel!
+    @IBOutlet weak var armorImageView: UIImageView!
+    
+    
+    @IBAction func BuyOrSellAction(_ sender: Any) {
+    }
+    var auctionHouseItem : ArmorAuctionItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let auctionHouseItem = auctionHouseItem {
-            switch auctionHouseItem.item {
-            case .WeaponEnum(_):
-                self.title = "Error"
-            case .ArmorEnum(let armor):
-                self.title = armor.name
-            }
-        }
+        self.title = auctionHouseItem.armor.name
+        
+        self.nameLabel.text = auctionHouseItem.armor.name
+        self.defLabel.text = String(auctionHouseItem.armor.defense)
+        self.resLabel.text = String(auctionHouseItem.armor.elementalResistance)
+        self.priceLabel.text = String(auctionHouseItem.price)
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .none
+        self.expirationLabel.text = formatter.string(from: auctionHouseItem.expirationDate)
+        
+        let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
+            size: CGSize(width: 100, height: 100),
+            radius: 20.0
+        )
+        
+        let placeholderImage = UIImage(named: "Armor")!
+        let newPlaceHolder = filter.filter(placeholderImage)
+        
+        let url = URL(string: "https://cdn4.iconfinder.com/data/icons/video-game-items-concepts/128/sword-shield-512.png")!
+        
+        armorImageView.af_setImage(withURL: url, placeholderImage: newPlaceHolder, filter: filter)
+        
         // Do any additional setup after loading the view.
     }
 

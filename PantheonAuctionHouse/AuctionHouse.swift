@@ -137,3 +137,29 @@ class Armor {
     let name : String
     let defense : Int
 }
+
+class WeaponAuctionItem {
+    
+    init(price: Int, expirationDate: Date, weapon: Weapon) {
+        self.price = price
+        self.expirationDate = expirationDate
+        self.weapon = weapon
+    }
+    
+    let price : Int
+    let expirationDate : Date
+    let weapon : Weapon
+}
+
+class ArmorAuctionItem {
+    
+    init(price: Int, expirationDate: Date, armor: Armor) {
+        self.price = price
+        self.expirationDate = expirationDate
+        self.armor = armor
+    }
+    
+    let price : Int
+    let expirationDate : Date
+    let armor : Armor
+}

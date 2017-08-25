@@ -225,63 +225,27 @@ class AuctionHouseViewController: UIViewController, UITableViewDelegate, UITable
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        
-        if let weaponController = segue.destination as? WeaponViewController {
-            weaponController.auctionHouseItem = selectedAuctionHouseItem
-        } else if let armorController = segue.destination as? ArmorViewController {
-            armorController.auctionHouseItem = selectedAuctionHouseItem
+        if let selectedItem = selectedAuctionHouseItem {
+            switch selectedItem.item {
+            case .ArmorEnum(let armor):
+                if let armorController = segue.destination as? ArmorViewController {
+                    armorController.auctionHouseItem = ArmorAuctionItem(price: selectedItem.price, expirationDate: selectedItem.expirationDate, armor: armor)
+                }
+                break
+            case .WeaponEnum(let weapon):
+                if let weaponController = segue.destination as? WeaponViewController {
+                    weaponController.auctionHouseItem = WeaponAuctionItem(price: selectedItem.price, expirationDate: selectedItem.expirationDate, weapon: weapon)
+                }
+                break
+            }
         }
     }
- 
-
 }
 
 extension AuctionHouseViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         textSearch = searchController.searchBar.text!
         auctionHouseTable.reloadData()
-    }
-}
-
-extension UIImageView {
-    public func imageFromServerURL(urlString: String) {
-        
-        URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
-            
-            if error != nil {
-                print(error ?? "error")
-                return
-            }
-            DispatchQueue.main.async(execute: { () -> Void in
-                let image = UIImage(data: data!)
-                let resized = self.resizeImage(image: image!, newSize: CGSize(width:100, height: 100))
-                self.image = resized
-            })
-            
-        }).resume()
-    }
-    
-    func resizeImage(image: UIImage, newSize: CGSize) -> (UIImage) {
-        
-        let newRect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height).integral
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 0)
-        let context = UIGraphicsGetCurrentContext()
-        
-        // Set the quality level to use when rescaling
-        context!.interpolationQuality = CGInterpolationQuality.default
-        let flipVertical = CGAffineTransform(a: 1, b: 0, c: 0, d: -1, tx: 0, ty: newSize.height)
-        
-        context!.concatenate(flipVertical)
-        // Draw into the context; this scales the image
-        context?.draw(image.cgImage!, in: CGRect(x: 0.0,y: 0.0, width: newRect.width, height: newRect.height))
-        
-        let newImageRef = context!.makeImage()! as CGImage
-        let newImage = UIImage(cgImage: newImageRef)
-        
-        // Get the resized image from the context and a UIImage
-        UIGraphicsEndImageContext()
-        
-        return newImage
     }
 }
 

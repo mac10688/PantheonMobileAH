@@ -7,23 +7,49 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class WeaponViewController: UIViewController {
 
-    var auctionHouseItem : AuctionHouseItem?
+    var auctionHouseItem : WeaponAuctionItem!
+    
+    @IBOutlet weak var weaponImage: UIImageView!
+    @IBOutlet weak var weaponNameLabel: UILabel!
+    @IBOutlet weak var dmgLabel: UILabel!
+    @IBOutlet weak var delayLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var expirationLabel: UILabel!
+    
+    @IBAction func buyOrSell(_ sender: UISegmentedControl) {
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let auctionHouseItem = auctionHouseItem {
-            switch auctionHouseItem.item {
-            case .WeaponEnum(let weapon):
-                self.title = weapon.name
-            case .ArmorEnum(_):
-                self.title = "Error"
-            }
-        }
         // Do any additional setup after loading the view.
+        self.title = auctionHouseItem.weapon.name
+        self.weaponNameLabel.text = auctionHouseItem.weapon.name
+        self.dmgLabel.text = String(auctionHouseItem.weapon.damage)
+        self.delayLabel.text = String(auctionHouseItem.weapon.delay)
+        self.priceLabel.text = String(auctionHouseItem.price)
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .none
+        self.expirationLabel.text = formatter.string(from: auctionHouseItem.expirationDate)
+        
+        let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
+            size: CGSize(width: 100, height: 100),
+            radius: 20.0
+        )
+        
+        let placeholderImage = UIImage(named: "Armor")!
+        let newPlaceHolder = filter.filter(placeholderImage)
+        
+        let url = URL(string: "https://cdn1.iconfinder.com/data/icons/outlined-medieval-icons-pack/200/misc_game_coop-512.png")!
+        
+        weaponImage.af_setImage(withURL: url, placeholderImage: newPlaceHolder, filter: filter)
+        
     }
 
     override func didReceiveMemoryWarning() {
